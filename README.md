@@ -1,12 +1,9 @@
 # r9-isbn-ci-starter
-ISBN exercise starter before adding CI hooks
-
-- Add Azure Badge 
-- Add link to Azure build project page
+Continuous Integration exercise using ISBN kata and Azure Pipelines 
 
 [![Build Status](https://dev.azure.com/paul0287/CSD-CI-exercise-2019-09/_apis/build/status/paul-r9.CSD-CI-2019-09?branchName=master)](https://dev.azure.com/paul0287/CSD-CI-exercise-2019-09/_build/latest?definitionId=2&branchName=master)
 
-[Azure DevOps Project page](https://dev.azure.com/paul0287/CSD-CI-2019-09)
+[Azure DevOps Project page](https://dev.azure.com/paul0287/CSD-CI-exercise-2019-09)
 
 
 # Tasks
