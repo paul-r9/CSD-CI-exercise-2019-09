@@ -33,4 +33,23 @@ public class ISBNFinder {
             return bookInfo;
       }
     }
+
+    public String CleanISBN(String ISBN) {
+        if (ISBN == null || ISBN.length() == 0) {
+            return "";
+        }
+
+        StringBuilder sb = new StringBuilder();
+        for (char c : ISBN.toCharArray()) {
+            if (Character.isDigit(c) || c == 'X') {
+                sb.append(c);
+            }
+        }
+
+        return sb.toString();
+    }
+
+    public boolean isValid(String ISBN){
+        return false;
+    }
 }

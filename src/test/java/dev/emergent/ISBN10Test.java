@@ -2,8 +2,7 @@ package dev.emergent;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 public class ISBN10Test {
 
@@ -56,5 +55,21 @@ public class ISBN10Test {
         BookInfo expected = new BookInfo("Test Driven Development by Example", "Kent Beck", "0321146530", "9780321146533");
 
         assertEquals(expected.toString(), actual.toString());
+    }
+
+    @Test
+    public void ISBN_CleanISBN_ClearsDashesandSpaces() {
+        String ISBN = "0 471-60695 2";
+
+        ISBNFinder sut = new ISBNFinder();
+        assertEquals("0471606952", sut.CleanISBN(ISBN));
+    }
+
+    @Test
+    public void ISBN_ValidateInputISBN10() {
+        String ISBN = "0 471 60695 2??";
+
+        ISBNFinder sut = new ISBNFinder();
+        assertFalse(sut.isValid(ISBN));
     }
 }
