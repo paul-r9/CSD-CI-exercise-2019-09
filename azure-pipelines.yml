@@ -20,8 +20,7 @@ steps:
     publishJUnitResults: false   # true for Unit Test reporting
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-    #Include the following for Code Coverage
-    #codeCoverageTool: 'JaCoCo'
-    #summaryFilelocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
-    #reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
-    #failIfCoverageEmpty: true
+    codeCoverageTool: 'JaCoCo'
+    summaryFilelocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
+    failIfCoverageEmpty: true
