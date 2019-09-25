@@ -3,6 +3,7 @@ package dev.emergent;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 public class ISBN10Test {
 
@@ -18,6 +19,7 @@ public class ISBN10Test {
 
         // Assert
         assertEquals("ISBN must be 10 characters in length", actual.title);
+        fail("Cody broke this test!");
     }
 
     @Test
