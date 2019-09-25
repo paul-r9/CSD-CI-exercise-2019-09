@@ -19,7 +19,6 @@ public class ISBN10Test {
 
         // Assert
         assertEquals("ISBN must be 10 characters in length", actual.title);
-        fail("Cody broke this test!");
     }
 
     @Test
