@@ -24,5 +24,3 @@ steps:
     summaryFilelocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
     reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
     failIfCoverageEmpty: true
-
-– task:
