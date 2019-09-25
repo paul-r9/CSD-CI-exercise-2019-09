@@ -1,4 +1,4 @@
-# r9-isbn-ci-starter
+# CSD-CI-exercise-2019-09
 Continuous Integration exercise using ISBN kata and Azure Pipelines 
 
 [![Build Status](https://dev.azure.com/paul0287/CSD-CI-exercise-2019-09/_apis/build/status/paul-r9.CSD-CI-exercise-2019-09?branchName=master)](https://dev.azure.com/paul0287/CSD-CI-exercise-2019-09/_build/latest?definitionId=3&branchName=master)
