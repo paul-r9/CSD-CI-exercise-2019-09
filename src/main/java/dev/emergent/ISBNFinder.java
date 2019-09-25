@@ -40,8 +40,9 @@ public class ISBNFinder {
         }
 
         StringBuilder sb = new StringBuilder();
-        for (char c : ISBN.toCharArray()) {
-            if (Character.isDigit(c) || c == 'X') {
+        for (int i = 0; i < ISBN.length(); i++) {
+            char c = ISBN.charAt(i);
+            if (Character.isDigit(c) || (i == ISBN.length() - 1 && c == 'X')) {
                 sb.append(c);
             }
         }
@@ -50,6 +51,19 @@ public class ISBNFinder {
     }
 
     public boolean isValid(String ISBN){
-        return false;
+        int count = 0;
+        for (int i = 0; i < ISBN.length(); i++){
+            char c = ISBN.charAt(i);
+            if(Character.isDigit(c) || c == ' ' || c == '-' ){
+                if (Character.isDigit(c)) {
+                    count++;
+                }
+
+            } else {
+                return false;
+            }
+        }
+        return ((count == 10) || (count == 13));
+
     }
 }

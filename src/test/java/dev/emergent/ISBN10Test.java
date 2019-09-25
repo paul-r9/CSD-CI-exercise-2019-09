@@ -66,10 +66,34 @@ public class ISBN10Test {
     }
 
     @Test
-    public void ISBN_ValidateInputISBN10() {
+    public void ISBN_ValidateWrongInputISBN10() {
         String ISBN = "0 471 60695 2??";
 
         ISBNFinder sut = new ISBNFinder();
         assertFalse(sut.isValid(ISBN));
+    }
+
+    @Test
+    public void ISBN_ValidateInputISBN10() {
+        String ISBN = "0 471-60695 2";
+
+        ISBNFinder sut = new ISBNFinder();
+        assertTrue(sut.isValid(ISBN));
+    }
+
+    @Test
+    public void ISBN_ValidateWrongInputISBN13() {
+        String ISBN = "978 0 ?/471 48648 0";
+
+        ISBNFinder sut = new ISBNFinder();
+        assertFalse(sut.isValid(ISBN));
+    }
+
+    @Test
+    public void ISBN_ValidateInputISBN13() {
+        String ISBN = "978 0-471 48648 0";
+
+        ISBNFinder sut = new ISBNFinder();
+        assertTrue(sut.isValid(ISBN));
     }
 }
