@@ -48,7 +48,6 @@
                 <goal>report</goal>
               </goals>
             </execution>
-            <!-- Incude the following execution task for Coverage Limits
             <execution>
                 <id>jacoco-check</id>
                 <phase>test</phase>
@@ -75,7 +74,6 @@
                     </rules>
                 </configuration>
             </execution>
-            -->
           </executions>
         </plugin>
       </plugins>
